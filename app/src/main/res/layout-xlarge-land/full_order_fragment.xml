@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:padding="10dp"
+    android:background="@color/fragment_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/fragment_background"
+        android:dividerPadding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Информация о клиенте"
+            android:layout_span="3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:dividerPadding="10dp"
+            android:baselineAligned="true"
+            android:focusable="false"
+            android:showDividers="middle">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/clientNameEdit"
+                android:nextFocusDown="@+id/clientPhoneEdit"
+                android:tag="clientName"
+                android:singleLine="true"
+                android:inputType="textCapWords|textPersonName|textAutoComplete"
+                android:hint="Имя клиента"
+                android:selectAllOnFocus="true"
+                android:editable="true"
+                android:gravity="center_vertical|left"
+                android:layout_weight="1.35"
+                android:padding="10dp" />
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:id="@+id/clientPhoneEdit"
+                android:nextFocusDown="@+id/carMakerEdit"
+                android:tag="clientPhoneNumber"
+                android:hint="№ телефона"
+                android:singleLine="true"
+                android:phoneNumber="true"
+                android:selectAllOnFocus="true"
+                android:gravity="center_vertical|left"
+                android:layout_weight="1"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Информация об автоэмали"
+            android:layout_span="3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/carMakerEdit"
+                android:nextFocusDown="@+id/colorCodeEdit"
+                android:tag="carMaker"
+                android:inputType="textCapWords|textAutoComplete"
+                android:singleLine="true"
+                android:editable="true"
+                android:selectAllOnFocus="true"
+                android:hint="Марка авто"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:padding="10dp"
+                android:capitalize="words" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/colorCodeEdit"
+                android:tag="colorCode"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:hint="Код краски"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:padding="10dp"
+                android:capitalize="characters" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/colorTypeSpinner"
+                android:tag="colorType"
+                android:layout_weight="1"
+                android:focusable="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/colorMakerSpinner"
+                android:tag="colorMaker"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Информация о заказе" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/orderTypeSpinner"
+            android:tag="orderType"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Объём заказа" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="2"
+                android:text="Объем: основа" />
+
+            <EditText
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/volumeBaseEdit"
+                android:nextFocusDown="@+id/volumeAdditionEdit"
+                android:tag="volumeBase"
+                android:layout_weight="1"
+                android:selectAllOnFocus="true"
+                android:autofillHints="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="2"
+                android:text="Объем: дополнит.(подложка)" />
+
+            <EditText
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/volumeAdditionEdit"
+                android:tag="volumeAddition"
+                android:layout_weight="1"
+                android:autofillHints="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Дата заказа" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/orderDateEdit"
+                android:tag="orderDate"
+                android:layout_weight="1"
+                android:hint="Дата заказа" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Дата выполнения" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/execDateEdit"
+                android:tag="execDate"
+                android:layout_weight="1"
+                android:hint="Дата выполнения" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

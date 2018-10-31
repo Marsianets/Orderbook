@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:dividerPadding="10dp"
+    android:focusable="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:id="@+id/clientNameView"
+        android:padding="5dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:id="@+id/carMakerView"
+        android:padding="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:longClickable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:id="@+id/colorCodeView"
+        android:padding="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:longClickable="false" />
+</LinearLayout>

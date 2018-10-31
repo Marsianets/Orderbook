@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="1dp"
+                android:layout_height="49dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.33"
+                android:gravity="right"
+                android:showDividers="middle"
+                android:dividerPadding="10dp">
+
+                <SearchView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/searchView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_toLeftOf="@+id/newOrderButton" />
+
+                <Button
+                    android:id="@+id/newOrderButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addNewOrder"
+                    android:textColor="@android:color/background_dark"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="25dp" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="1px"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.66">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saveButtonText"
+                    android:id="@+id/saveButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="20dp"
+                    android:textSize="25dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/execStateText"
+                    android:id="@+id/execStateCheckBox"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:textSize="25dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/summaryFragment"
+                android:layout_weight="0.33"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/fragment_background"
+                android:orientation="vertical" />
+
+            <Space
+                android:id="@+id/space1"
+                android:layout_height="match_parent"
+                android:layout_width="1dp"
+                android:layout_toRightOf="@+id/firstFragment" />
+
+            <LinearLayout
+                android:id="@+id/fullFragment"
+                android:layout_weight="0.67"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/space1"
+                android:background="@color/fragment_background"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

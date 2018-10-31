@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FullOrderActivity">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/FullFragmentToolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentTop="true">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/saveButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentEnd="false"-->
+            <!--android:layout_marginStart="20dp"-->
+            <!--android:text="@string/saveButtonText" />-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/execStateCheckBox"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginEnd="20dp"-->
+            <!--android:text="@string/execStateText" />-->
+
+    <!--</RelativeLayout>-->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fullOrderActivityToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <LinearLayout
+        android:id="@+id/fullFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"/>
+
+
+</RelativeLayout>
