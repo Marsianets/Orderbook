@@ -99,7 +99,7 @@ public class FullOrderFragment extends Fragment {
     public void showOrder(Order order) {
         currentOrder = order;
         valueList = currentOrder.getOrderValues();
-        editFields = new ArrayList<EditText>();
+        editFields = new ArrayList<>();
 
         if (mainLayout != null) {
 
@@ -191,15 +191,14 @@ public class FullOrderFragment extends Fragment {
             String currentFieldTag = (String) currentField.getTag();
             if (keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
                     (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                if (currentField.getText() != null) {
-                    valueList.put(currentFieldTag, currentField.getText().toString());
-                }
                 if (nextField != null) {
                     nextField.requestFocus();
                 }
                 return true;
             }
-
+            if (currentField.getText() != null) {
+                valueList.put(currentFieldTag, currentField.getText().toString());
+            }
             return false;
         }
     };
